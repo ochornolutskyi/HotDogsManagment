@@ -23,16 +23,20 @@ exports.create = function(req, res){
           res.redirect('..');
     })
 }
-
-
 exports.edit = function (req, res) {
     hotDogs.findByID(req.params.id, function (err, doc) {
         if (err) {
             console.log(err);
             return res.sendStatus(500);
         }
-        console.log(doc)
-        res.render('edit', {item: doc});
+        var params = {
+            formAction: '/update/' + doc._id + '?_method=PUT',
+            formTitle: 'Edit Hot Dog', 
+            name: doc.name, 
+            description: doc.description,
+          };
+          res.render('edit', { item: params });
+
     });
 }
 exports.update = function(req, res){

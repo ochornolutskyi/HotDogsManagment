@@ -17,7 +17,15 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 app.get('/', hotDogsController.all);
 
-app.get('/new', function (req, res) { res.render('create') });
+app.get('/new', function (req, res) {
+  var params = {
+    formAction: '/create',
+    formTitle: 'Create Hot Dog', 
+    name: '', 
+    description: '',
+  };
+  res.render('edit', { item: params });
+});
 app.post('/create', hotDogsController.create);
 
 app.get('/edit/:id', hotDogsController.edit);
@@ -29,7 +37,7 @@ db.connect('mongodb+srv://ochornolutskyi:0306manutd!@cluster0-cceuj.mongodb.net/
   if (err) {
     return console.log(err);
   }
-  app.listen(process.env.PORT || 3000, function(){
+  app.listen(process.env.PORT || 3000, function () {
     console.log("Express server listening on port %d in %s mode", this.address().port, app.settings.env);
   });
 });

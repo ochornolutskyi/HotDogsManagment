@@ -121,11 +121,11 @@ td{
 	justify-content: space-around;
 	align-items: center;
 }
-#create h2{
+.modal h2{
 	font-size: 25px;
 	font-weight: bold;
 }
-#create input{
+.modal input{
 	max-width: 350px;
 	width: 100%;
 }
