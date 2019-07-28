@@ -1,44 +1,46 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <% include ./partials/header.ejs %>
 </head>
 
-  <body>
-    <div class="wrap">
-        <div class="content">
-          <% include ./partials/nav.ejs %>
-            <main>
-                    <a href="/new">Create New Hot Dog</a>
-                    <div class="table-layer">
-                        <table id="table">
-                            <tr>
-                                <td>Name</td>
-                                <td>How to do</td>
-                                <td>Options</td>
-                            </tr>
-                            <% ar.forEach(function(item){ %>
-                            <tr>
-                                <td><%= item.name %> Dog</td>
-                                <td><%= item.description %></td>
-                                <td id=><a href="/edit/<%=item._id %>">Edit</a>
-                                    <form method="POST" action="/delete/<%= item._id %>?_method=DELETE">
-                                    <button id="but" type="submit">Delete</button></form>
-                                </td>
-                            </tr>
-                            <% }); %>
-                    </div>
-                    </table>
-                </div>
-            </main>
+<body>
+  <div class="wrap">
+    <div class="content">
+      <% include ./partials/nav.ejs %>
+      <main>
+        <button id="but" class="butcreate" onclick="location.href = '/new';">Create New Hot Dog</button>
+        <div class="table-layer">
+          <table id="table">
+            <tr>
+              <td>Name</td>
+              <td>How to do</td>
+              <td>Options</td>
+            </tr>
+            <% ar.forEach(function(item){ %>
+            <tr>
+              <td><%= item.name %> Dog</td>
+              <td><%= item.description %></td>
+              <td id=''>
+                <button id="but" onclick="location.href = '/edit/<%=item._id %>';">Edit</button>
+                <form method="POST" action="/delete/<%= item._id %>?_method=DELETE">
+                  <button id="but" type="submit">Delete</button></form>
+              </td>
+            </tr>
+            <% }); %>
         </div>
-  
-        <footer class="footer">
-        </footer>
+        </table>
     </div>
-  
-    <script src="./js/jquery-3.4.1.min.js"></script>
-    <script src="./js/main.js"></script>
-  </body>
-  
-  </html>
+    </main>
+  </div>
+
+  <footer class="footer">
+  </footer>
+  </div>
+
+  <script src="./js/jquery-3.4.1.min.js"></script>
+  <script src="./js/main.js"></script>
+</body>
+
+</html>
