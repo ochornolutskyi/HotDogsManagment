@@ -1,36 +1,37 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <% include ./partials/header.ejs %>
-</head>
-<body>
-    <div class="wrap">
-        <div class="content">
-            <header>
-                <div class="welcome">
-                    <h1>Welcome to Hot <img src="./img/logo.png" alt="logo">
-                        Dogs managment</h1>
-                </div>
-            </header>
-            <main>
-                <div class="modalWindow">
-                    <form class="modal" method="POST" action="<%= item.formAction %>">
-                        <h2><%= item.formTitle %></h2>
-                        <label>Enter Hot Dog name</label>
-                        <input type="textarea" name="name" value="<%= item.name %>">
-                        <label>Enter Hot Dog description</label>
-                        <input type="textarea" name="description" value="<%= item.description %>">
-                        <div class="modalWindow-buttonLayer">
-                            <button id="but" type="submit">Save</button>
-                            <button id="but">Cancel</button>
-                        </div>
-                    </form>
-                </div>
-            </main>
-        </div>
 
-        <footer class="footer">
-        </footer>
+<head>
+    <% include ./partials/header.ejs %>
+</head>
+
+<body>
+    <div class="content">
+        <div class="welcome">
+            <h1>Welcome to Hot <img src="./img/logo.png" alt="logo"> Dogs managment</h1>
+        </div>
+        <main>
+            <div class="hotDog">
+                <h2>
+                    <%= item.formTitle %>
+                </h2>
+                <div class="hr"></div>
+                <form class="modal" method="POST" action="<%= item.formAction %>">
+                    <label for="valueName">Enter Hot Dog name</label>
+                    <input id="valueName" type="text" name="name" value="<%= item.name %>" required>
+                    <label for="valueDescription">Enter Hot Dog description</label>
+                    <textarea id="valueDescription" rows="5" name="description" value="<%= item.description %>" required></textarea>
+                    <div class="modalWindow-buttonLayer">
+                        <button class="but" type="submit">Save</button>
+                        <button class="but" type="reset" onclick="location.href = '/';">Cancel</button>
+                    </div>
+                </form>
+            </div>
+        </main>
+    </div>
+
+    <footer class="footer">
+    </footer>
     </div>
 
     <script src="./js/jquery-3.4.1.min.js"></script>

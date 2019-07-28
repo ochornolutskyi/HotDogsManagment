@@ -1,167 +1,206 @@
 @font-face {
-	font-family: "TitilliumWeb";
-	src: url("../fonts/TitilliumWeb/TitilliumWeb.woff2") format("woff2"),
-	  url("../fonts/TitilliumWeb/TitilliumWeb.woff") format("woff"),
-	  url("../fonts/TitilliumWeb/TitilliumWeb.ttf") format("truetype");
-	font-style: normal;
-	font-weight: normal;
-  }
-
-body{
-	height: auto;
-	color: #fff;
-	font-family: "TitilliumWeb";
-}
-header{
-	background: url(../img/header.jpeg);
-	background-size: auto 50%;
-	background-position: center;
-	width: 100%;
-	min-height: 400px;
-	text-align: center;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-}
-.welcome{
-	width: 80%;
-	padding: 15px;
-	background: rgba(50, 50, 50, 0.75);
-	border-radius: 10px;
-}
-	
-h1{
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	color: whitesmoke;
-	z-index: 20;
-	opacity: 1;
-	font-weight: bold;
-	font-size: 52px;
-}
-h1 img{
-	margin: 0 10px;
-	max-height: 52px;
-	height: 100%;
+    font-family: "TitilliumWeb";
+    src: url("../fonts/TitilliumWeb/TitilliumWeb.woff2") format("woff2"), url("../fonts/TitilliumWeb/TitilliumWeb.woff") format("woff"), url("../fonts/TitilliumWeb/TitilliumWeb.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
 }
 
-main{
-	padding: 50px 0;
-	background-color: rgba(0, 0, 0, 0.95);
-	width: 100%;
-	min-height: 150px;
-	height: auto;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-}
-main a{
-	display: block;
-	max-width: 75px;
-	width: 100%;
-	height: 50px;
-	line-height: 50px;
-	background: rgba(50, 50, 50, 0.75);
-	color: whitesmoke;
-	text-decoration: none;
-	cursor: pointer;
-	text-align: center;
-	border-radius: 5px;
-	font-size: 20px;
-}
-main a:hover{
-	background: rgba(100, 100, 100, 0.75);
-	transition: all 0.3s linear;
-}
-footer{
-	background-color: rgb(0, 0, 0);
-	width: 100%;
-	height: 75px;
-}
-.table-layer{
-	width: 80%;
-	display: block;
-}
-table{
-	margin-top: 25px;
-	width: 100%;
-}
-table, tr, td{
-	color: white;
-	border: 1px solid white;
-}
-tr,td{
-	height: 50px;
-}
-td{	
-	vertical-align: middle;
-	padding: 5px;
-}
-#text{
-	font-family: "TitilliumWeb";
-
-}
-.active{
-	display: table;
+html {
+    background: url(../img/header.jpeg);
+    background-size: auto 50%;
+    background-position: center;
 }
 
-.modalWindow{
-	background-color: rgba(50, 50, 50, 0.75);
-	width: 500px;
-	min-height: 250px;
-	border-radius: 15px;
-}
-.modalWindow form{
-	margin: 0 auto;
-	width: 85%;
-	height: 100%;
-	display: flex;
-	flex-direction: column;
-	justify-content: space-around;
-	align-items: center;
-}
-.modal h2{
-	font-size: 25px;
-	font-weight: bold;
-}
-.modal input{
-	max-width: 350px;
-	width: 100%;
-}
-.modalWindow-buttonLayer{
-	width: 100%;
-	display: flex;
-	flex-direction: row;
-	justify-content: space-evenly;
-}
-#but{
-	max-width: 75px;
-	width: 100%;
-	height: 50px;
-	background: rgba(50, 50, 50, 0.75);
-	color: whitesmoke;
-	font-size: 18px;
-	border-style: groove;
-	border: 1px solid rgba(100, 100, 100, 0.75);	border-radius: 5px;
-	margin-top: 10px;
-	cursor: pointer;
-}
-#create #but{
-	border-style: groove;
-	border: 1px solid rgba(100, 100, 100, 0.75);
-}
-/* #but:hover{
-	background: rgba(100, 100, 100, 0.75);
-	transition: all 0.3s linear;
-} */
-#but:hover, #del:hover{
-	background: rgba(100, 100, 100, 0.75);
-	transition: all 0.3s linear;
+* {
+    border: 0;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
 }
 
-@media screen and (max-width: 1060px){
-	h1 img{
-		display: none;
-	}
+body {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    color: #fff;
+    font-family: "TitilliumWeb";
+}
+
+.content {
+    margin: 0 auto;
+    width: 85%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.95);
+}
+
+.welcome {
+    margin-top: 25px;
+    width: 88%;
+    background: rgba(50, 50, 50, 0.75);
+    border-radius: 10px;
+    margin-bottom: 25px;
+}
+
+.welcome h1 {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: whitesmoke;
+    z-index: 20;
+    opacity: 1;
+    font-weight: bold;
+    font-size: 52px;
+}
+
+.welcome h1 img {
+    margin: 0 10px;
+    max-height: 52px;
+    height: 100%;
+}
+
+main {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#butCreate {
+    width: 350px;
+    height: 50px;
+    margin-bottom: 25px;
+}
+
+.but {
+    width: 150px;
+    height: 35px;
+    background: rgba(50, 50, 50, 0.75);
+    color: whitesmoke;
+    font-size: 18px;
+    border-style: groove;
+    border: 1px solid rgba(100, 100, 100, 0.75);
+    border-radius: 5px;
+    cursor: pointer;
+    border-style: groove;
+    border: 1px solid rgba(100, 100, 100, 0.75);
+}
+
+#butCreate:hover {
+    background: rgba(24, 192, 24, 0.808);
+    transition: all 0.3s linear;
+}
+
+.editBut:hover {
+    background: rgba(202, 167, 49, 0.849);
+    transition: all 0.3s linear;
+}
+
+.deleteBut {
+    width: 150px;
+    margin-left: 10px;
+}
+
+.deleteBut .but:hover {
+    background: rgba(196, 13, 13, 0.842);
+    transition: all 0.3s linear;
+}
+
+.hotDog {
+    width: 88%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(50, 50, 50, 0.75);
+    border-radius: 10px;
+    padding: 15px;
+    margin-bottom: 25px;
+}
+
+.hotDog-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.hotDog-header__name {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.hotDog-header__options {
+    display: flex;
+}
+
+.hr {
+    height: 2px;
+    margin-top: 10px;
+    background-color: rgba(248, 248, 248, 0.336);
+}
+
+.hotDog-description {
+    word-wrap: break-word;
+    min-height: 48px;
+    margin-top: 15px;
+    font-size: 18px;
+    text-align: justify;
+}
+
+.hotDog h2 {
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 25px;
+}
+
+.modal {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 15px;
+    margin-top: 35px;
+}
+
+.modalWindow-buttonLayer {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+textarea,
+input {
+    background-color: rgba(50, 50, 50, 0.75);
+    border: none;
+    width: 100%;
+    box-sizing: border-box;
+    color: whitesmoke;
+    font-size: 16px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid rgba(24, 192, 24, 0.808);
+}
+
+label {
+    color: rgba(24, 192, 24, 0.808);
+    font-weight: bold;
+    margin-bottom: 5px;
+    font-size: 20px;
+}
+
+@media screen and (max-width: 1130px) {
+    h1 img {
+        display: none;
+    }
 }
