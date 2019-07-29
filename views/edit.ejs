@@ -8,7 +8,7 @@
 <body>
     <div class="content">
         <div class="welcome">
-            <h1>Welcome to Hot <img src="./img/logo.png" alt="logo"> Dogs managment</h1>
+            <h1>Welcome to Hot <img src="/img/logo.png" alt="logo"> Dogs managment</h1>
         </div>
         <main>
             <div class="hotDog">
@@ -21,9 +21,9 @@
                     <input id="valueName" type="text" name="name" value="<%= item.name %>" required>
                     <label for="valueDescription">Enter Hot Dog description</label>
                     <textarea id="valueDescription" rows="5" name="description" value="<%= item.description %>" required></textarea>
-                    <div class="modalWindow-buttonLayer">
-                        <button class="but" type="submit">Save</button>
-                        <button class="but" type="reset" onclick="location.href = '/';">Cancel</button>
+                    <div class="modal-buttonLayer">
+                        <button class="but butForm greenHover" type="submit">Save</button>
+                        <button class="but butForm redHover" type="reset" onclick="location.href = '/';">Cancel</button>
                     </div>
                 </form>
             </div>

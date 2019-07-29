@@ -1,0 +1,41 @@
+@import 'welcome';
+@import 'buttons';
+@import'main';
+@import 'forms';
+@import 'media-request';
+@font-face {
+    font-family: "TitilliumWeb";
+    src: url("../fonts/TitilliumWeb/TitilliumWeb.woff2") format("woff2"), url("../fonts/TitilliumWeb/TitilliumWeb.woff") format("woff"), url("../fonts/TitilliumWeb/TitilliumWeb.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+
+* {
+    border: 0;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: url(../img/header.jpeg) center center fixed;
+    background-size: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    color: #fff;
+    font-family: "TitilliumWeb", "Open Sans";
+}
+
+.content {
+    margin: auto;
+    width: 85%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.9);
+}

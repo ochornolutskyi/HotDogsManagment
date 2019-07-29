@@ -1,0 +1,23 @@
+.welcome {
+    margin-top: 25px;
+    width: 88%;
+    background: rgba(50, 50, 50, 0.75);
+    border-radius: 10px;
+    margin-bottom: 25px;
+    padding: 5px;
+    h1 {
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: whitesmoke;
+        opacity: 1;
+        font-weight: bold;
+        font-size: 52px;
+        img {
+            margin: 0 10px;
+            max-height: 52px;
+            height: 100%;
+        }
+    }
+}

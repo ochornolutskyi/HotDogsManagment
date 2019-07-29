@@ -9,10 +9,10 @@
 <body>
     <div class="content">
         <div class="welcome">
-            <h1>Welcome to Hot <img src="./img/logo.png" alt="logo"> Dogs managment</h1>
+            <h1>Welcome to Hot <img src="/img/logo.png" alt="logo"> Dogs managment</h1>
         </div>
         <main>
-            <button class="but" id="butCreate" onclick="location.href = '/new';">Create New Hot Dog</button>
+            <button class="but greenHover" id="butCreate" onclick="location.href = '/new';">Create New Hot Dog</button>
             <% ar.forEach(function(item){ %>
                 <div class="hotDog">
                     <div class="hotDog-header">
@@ -20,9 +20,9 @@
                             <span><%= item.name %> Dog</span>
                         </div>
                         <div class="hotDog-header__options">
-                            <button class="but editBut" onclick="location.href = '/edit/<%=item._id %>';">Edit</button>
-                            <form class="deleteBut" method="POST" action="/delete/<%= item._id %>?_method=DELETE">
-                                <button class="but" type="submit">Delete</button></form>
+                            <button class="but yellowHover" onclick="location.href = '/edit/<%=item._id %>';">Edit</button>
+                            <form class="delete" method="POST" action="/delete/<%= item._id %>?_method=DELETE">
+                                <button class="but redHover deleteBut" type="submit">Delete</button></form>
                         </div>
                     </div>
                     <div class="hr"></div>

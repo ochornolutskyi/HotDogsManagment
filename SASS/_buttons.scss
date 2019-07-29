@@ -1,0 +1,60 @@
+$colorRed: rgba(196, 13, 13, 0.842);
+$colorYellow: rgba(202, 167, 49, 0.849);
+$colorGreen: rgba(24, 192, 24, 0.808);
+.but {
+    max-width: 150px;
+    width: 100%;
+    max-height: 35px;
+    height: 100%;
+    background: rgba(50, 50, 50, 0.75);
+    color: whitesmoke;
+    font-size: 18px;
+    border-style: groove;
+    border: 1px solid rgba(100, 100, 100, 0.75);
+    border-radius: 5px;
+    cursor: pointer;
+    border-style: groove;
+    border: 1px solid rgba(100, 100, 100, 0.75);
+}
+
+.but:hover {
+    transition: all 0.3s linear;
+}
+
+#butCreate {
+    max-width: 350px;
+    width: 100%;
+    max-height: 50px;
+    height: 100%;
+    margin-bottom: 25px;
+    font-size: 25px
+}
+
+.greenHover:hover {
+    box-shadow: 0px 0px 15px 0px $colorGreen;
+    background: $colorGreen;
+    border-color: $colorGreen;
+}
+
+.yellowHover:hover {
+    box-shadow: 0px 0px 10px 0px $colorYellow;
+    background: $colorYellow;
+    border-color: $colorYellow;
+}
+
+.redHover:hover {
+    box-shadow: 0px 0px 10px 0px $colorRed;
+    background: $colorRed;
+    border-color: $colorRed;
+}
+
+.delete {
+    margin-left: 10px;
+}
+
+.butForm {
+    max-width: 250px;
+    width: 100%;
+    max-height: 50px;
+    height: 100%;
+}
