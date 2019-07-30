@@ -18,9 +18,9 @@
                 <div class="hr"></div>
                 <form class="modal" method="POST" action="<%= item.formAction %>">
                     <label for="valueName">Enter Hot Dog name</label>
-                    <input id="valueName" type="text" name="name" value="<%= item.name %>" required>
+                    <input id="valueName" type="text" name="name" value="<%= item.description %>" required>
                     <label for="valueDescription">Enter Hot Dog description</label>
-                    <textarea id="valueDescription" rows="5" name="description" value="<%= item.description %>" required></textarea>
+                    <textarea id="valueDescription" rows="5" name="description" required><%= item.description %></textarea>
                     <div class="modal-buttonLayer">
                         <button class="but butForm greenHover" type="submit">Save</button>
                         <button class="but butForm redHover" type="reset" onclick="location.href = '/';">Cancel</button>
