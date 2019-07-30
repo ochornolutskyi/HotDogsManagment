@@ -4,7 +4,7 @@
   background: rgba(50, 50, 50, 0.75);
   border-radius: 10px;
   margin-bottom: 25px;
-  padding: 5px;
+  padding: 10px;
 }
 .welcome h1 {
   text-align: center;
@@ -129,18 +129,15 @@ main {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
+  -webkit-box-align: space-between;
+      -ms-flex-align: space-between;
+          align-items: space-between;
 }
 .hotDog-header__name {
+  width: 65%;
   font-size: 23px;
   font-weight: bold;
 }
@@ -153,16 +150,19 @@ main {
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 .hotDog-description {
-  word-wrap: break-word;
   min-height: 48px;
   margin-top: 10px;
   font-size: 18px;
   text-align: justify;
 }
 .hotDog-description span {
-  display: inline-block;
   text-indent: 1.8em;
   line-height: 1.8em;
 }
@@ -211,6 +211,7 @@ main {
 }
 .modal textarea,
 .modal input {
+  padding: 5px;
   background-color: rgba(50, 50, 50, 0.75);
   border: none;
   width: 100%;
@@ -229,202 +230,259 @@ main {
   font-size: 20px;
 }
 
-/* @media screen and (max-width: 1260px) {
-    h1 img {
-        display: none;
-    }
-} */
-@media (min-width: 768px) and (max-width: 1023px) {
+@media (min-width: 1023px) and (max-width: 1145px) {
+  .welcome h1 {
+    font-size: 45px;
+  }
+}
+@media (min-width: 768px) and (max-width: 1022px) {
   .welcome h1 {
     font-size: 25px;
   }
-
   .welcome h1 img {
     margin: 0 10px;
     max-height: 52px;
     height: 100%;
   }
 
-  main {
+  .but {
+    max-width: 75px;
     width: 100%;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    font-size: 16px;
   }
 
   #butCreate {
-    width: 350px;
-    height: 50px;
     margin-bottom: 25px;
+    font-size: 20px;
   }
 
-  .but {
-    width: 150px;
-    height: 35px;
-    background: rgba(50, 50, 50, 0.75);
-    color: whitesmoke;
-    font-size: 18px;
-    border-style: groove;
-    border: 1px solid rgba(100, 100, 100, 0.75);
-    border-radius: 5px;
-    cursor: pointer;
-    border-style: groove;
-    border: 1px solid rgba(100, 100, 100, 0.75);
+  .hotDog-header__name {
+    text-align: justify;
+    font-size: 20px;
+    margin-right: 10px;
   }
-
-  #butCreate:hover {
-    background: rgba(24, 192, 24, 0.808);
-    -webkit-transition: all 0.3s linear;
-    transition: all 0.3s linear;
-  }
-
-  .editBut:hover {
-    background: rgba(202, 167, 49, 0.849);
-    -webkit-transition: all 0.3s linear;
-    transition: all 0.3s linear;
-  }
-
-  .deleteBut {
-    width: 150px;
-    margin-left: 10px;
-  }
-
-  .deleteBut .but:hover {
-    background: rgba(196, 13, 13, 0.842);
-    -webkit-transition: all 0.3s linear;
-    transition: all 0.3s linear;
-  }
-
-  .hotDog {
-    width: 88%;
-    margin: 0 auto;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    background-color: rgba(50, 50, 50, 0.75);
-    border-radius: 10px;
-    padding: 15px;
-    margin-bottom: 25px;
-  }
-
-  .hotDog-header {
+  .hotDog-header__options {
+    max-width: 250px;
     width: 100%;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    -webkit-box-align: end;
-        -ms-flex-align: end;
-            align-items: flex-end;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    margin-left: 10px;
   }
-
-  .hotDog-header__name {
-    font-size: 20px;
-    font-weight: bold;
+  .hotDog-header__options .delete {
+    width: auto;
   }
-
-  .hotDog-header__options {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
+  .hotDog-description {
+    font-size: 16px;
+  }
+  .hotDog h2 {
+    font-size: 21px;
+    margin-bottom: 0;
   }
 
   .hr {
     height: 2px;
-    margin-top: 10px;
+    margin-top: 15px;
     background-color: rgba(248, 248, 248, 0.336);
   }
 
-  .hotDog-description {
-    word-wrap: break-word;
-    min-height: 48px;
-    margin-top: 15px;
+  .modal {
+    border-radius: 10px;
+    margin-top: 20px;
+  }
+  .modal textarea,
+  .modal input {
+    font-size: 16px;
+  }
+  .modal label {
     font-size: 18px;
-    text-align: justify;
+  }
+  .modal .butForm {
+    max-width: 150px;
+  }
+}
+@media only screen and (min-width: 500px) and (max-width: 767px) {
+  .welcome {
+    margin: 15px 0;
+  }
+  .welcome h1 {
+    font-size: 20px;
+  }
+  .welcome h1 img {
+    max-height: 30px;
+    height: 100%;
   }
 
+  .but {
+    max-width: 75px;
+    width: 100%;
+    font-size: 14px;
+  }
+
+  #butCreate {
+    width: 85%;
+    margin-bottom: 15px;
+    font-size: 16px;
+  }
+
+  .hotDog-header__name {
+    text-align: justify;
+    font-size: 16px;
+    height: 100%;
+  }
+  .hotDog-header__options {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  .hotDog-header__options .delete {
+    width: auto;
+  }
+  .hotDog-description {
+    font-size: 14px;
+  }
+  .hotDog-description span {
+    text-indent: 0;
+    line-height: normal;
+  }
   .hotDog h2 {
-    text-align: center;
-    font-size: 30px;
-    font-weight: bold;
-    margin-bottom: 25px;
+    font-size: 16px;
+    margin-bottom: 0;
+  }
+
+  .hr {
+    height: 1px;
+    margin-top: 15px;
+    background-color: rgba(248, 248, 248, 0.336);
   }
 
   .modal {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    width: 100%;
-    height: 100%;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    border-radius: 15px;
-    margin-top: 35px;
+    border-radius: 5px;
+    margin-top: 15px;
+  }
+  .modal textarea,
+  .modal input {
+    font-size: 14px;
+  }
+  .modal label {
+    text-align: center;
+    font-size: 14px;
+  }
+  .modal .butForm {
+    max-width: 75px;
+  }
+}
+@media only screen and (min-width: 320px) and (max-width: 499px) {
+  .welcome {
+    margin: 15px 0;
+  }
+  .welcome h1 {
+    font-size: 18px;
+  }
+  .welcome h1 img {
+    display: none;
   }
 
-  .modalWindow-buttonLayer {
+  .but {
+    max-width: 75px;
     width: 100%;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
+    font-size: 14px;
+  }
+
+  #butCreate {
+    width: 85%;
+    margin-bottom: 15px;
+    font-size: 16px;
+  }
+
+  .hotDog-header {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: space-between;
+        -ms-flex-align: space-between;
+            align-items: space-between;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .hotDog-header__name {
+    width: 100%;
+    text-align: justify;
+    font-size: 16px;
+  }
+  .hotDog-header__options {
+    width: 100%;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
-    -webkit-box-pack: space-evenly;
-        -ms-flex-pack: space-evenly;
-            justify-content: space-evenly;
-  }
-
-  textarea,
-  input {
-    background-color: rgba(50, 50, 50, 0.75);
-    border: none;
     width: 100%;
-    -webkit-box-sizing: border-box;
-            box-sizing: border-box;
-    color: whitesmoke;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    margin-bottom: 10px;
+  }
+  .hotDog-header__options .delete {
+    width: auto;
+    margin-left: 0;
+  }
+  .hotDog-description {
+    font-size: 14px;
+  }
+  .hotDog-description span {
+    text-indent: 0;
+    line-height: normal;
+  }
+  .hotDog h2 {
     font-size: 16px;
-    margin-bottom: 20px;
-    border-bottom: 1px solid rgba(24, 192, 24, 0.808);
-    border-radius: 5px;
+    margin-bottom: 0;
   }
 
-  label {
-    color: rgba(24, 192, 24, 0.808);
-    font-weight: bold;
-    margin-bottom: 5px;
-    font-size: 20px;
+  .hr {
+    height: 1px;
+    margin-top: 15px;
+    background-color: rgba(248, 248, 248, 0.336);
+  }
+
+  .modal {
+    border-radius: 5px;
+    margin-top: 15px;
+  }
+  .modal textarea,
+  .modal input {
+    font-size: 14px;
+  }
+  .modal label {
+    text-align: center;
+    font-size: 14px;
+  }
+  .modal .butForm {
+    max-width: 75px;
   }
 }
-/* @media only screen and (max-width : 320px) {} */
 @font-face {
   font-family: "TitilliumWeb";
   src: url("../fonts/TitilliumWeb/TitilliumWeb.woff2") format("woff2"), url("../fonts/TitilliumWeb/TitilliumWeb.woff") format("woff"), url("../fonts/TitilliumWeb/TitilliumWeb.ttf") format("truetype");
@@ -440,6 +498,7 @@ main {
 }
 
 body {
+  word-wrap: break-word;
   background: url(../img/header.jpeg) center center fixed;
   background-size: 100%;
   display: -webkit-box;
@@ -455,6 +514,11 @@ body {
   height: auto;
   color: #fff;
   font-family: "TitilliumWeb", "Open Sans";
+}
+
+span {
+  display: block;
+  word-wrap: break-word;
 }
 
 .content {

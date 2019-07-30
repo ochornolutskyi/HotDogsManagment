@@ -18,10 +18,10 @@ main {
     &-header {
         width: 100%;
         display: flex;
-        flex-direction: row;
         justify-content: space-between;
-        align-items: flex-end;
+        align-items: space-between;
         &__name {
+            width: 65%;
             font-size: 23px;
             font-weight: bold;
         }
@@ -30,16 +30,16 @@ main {
             width: 100%;
             display: flex;
             justify-content: flex-end;
+            align-items: flex-start;
+            flex-wrap: wrap;
         }
     }
     &-description {
-        word-wrap: break-word;
         min-height: 48px;
         margin-top: 10px;
         font-size: 18px;
         text-align: justify;
         span {
-            display: inline-block;
             text-indent: 1.8em;
             line-height: 1.8em;
         }
